@@ -211,5 +211,5 @@ it = 10
 cord = [(0,0), (0,1), (1,0), (0,2)]
 cord = []
 
-# start_game(n, cord, it)
+start_game(n, cord, it)
 
