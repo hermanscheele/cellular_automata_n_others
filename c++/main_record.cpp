@@ -16,22 +16,20 @@ int main()
     fill_random(grid, count);
 
     unsigned int wind_size = 600;
-    sf::RenderWindow window(sf::VideoMode({wind_size, wind_size}), "Cell Automaton");
 
     int border = 1;
     float cell_size = (float)(wind_size - border * n) / n;
 
     fs::create_directory("frames_2d");
 
-    int frame = 0;
+    sf::RenderTexture rt;
+    rt.resize({wind_size, wind_size});
+
     int total_frames = 60;
 
-    while (window.isOpen() && frame < total_frames)
+    for (int frame = 0; frame < total_frames; frame++)
     {
-        while (const std::optional event = window.pollEvent())
-            if (event->is<sf::Event::Closed>()) window.close();
-
-        window.clear(sf::Color::Black);
+        rt.clear(sf::Color::Black);
 
         for (int i = 0; i < n; i++)
         {
@@ -43,22 +41,16 @@ int main()
                 sf::RectangleShape rect({cell_size, cell_size});
                 rect.setPosition({x, y});
                 rect.setFillColor(grid[i][j] == 1 ? sf::Color::Green : sf::Color::Black);
-                window.draw(rect);
+                rt.draw(rect);
             }
         }
 
-        window.display();
-
-        sf::Texture texture;
-        texture.resize({wind_size, wind_size});
-        texture.update(window);
-        sf::Image image = texture.copyToImage();
+        rt.display();
+        sf::Image image = rt.getTexture().copyToImage();
         image.saveToFile("frames_2d/frame_" + to_string(frame) + ".png");
 
         apply_rule(grid);
-        frame++;
     }
 
-    window.close();
     return 0;
 }
