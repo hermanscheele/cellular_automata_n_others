@@ -18,6 +18,6 @@ Conway's Game of Life in Python, C++ (SFML), and C++ (Raylib 3D).
   <tr>
     <td><code>python3 graphics.py</code></td>
     <td><code>cd c++ && ./main</code></td>
-    <td><code>cd c++ && ./3D</code></td>
+    <td><code>cd c++ && ./3D</code> look & move around with mouse & w,s,a,d keys!</td>
   </tr>
 </table>
