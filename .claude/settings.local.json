@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import imageio; print\\('imageio ok'\\)\")",
+      "Bash(python3 -c \"import cv2; print\\('cv2 ok'\\)\")",
+      "Bash(python3 -c \"import pygame; print\\('pygame ok'\\)\")",
+      "Bash(pkg-config --libs sfml-graphics sfml-window sfml-system)",
+      "Bash(brew list:*)",
+      "Bash(pkg-config --cflags --libs raylib)",
+      "Bash(./main_record:*)",
+      "Bash(./3D_record:*)",
+      "Bash(python3:*)"
+    ]
+  }
+}
