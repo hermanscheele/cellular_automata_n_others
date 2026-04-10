@@ -9,7 +9,12 @@
       "Bash(pkg-config --cflags --libs raylib)",
       "Bash(./main_record:*)",
       "Bash(./3D_record:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(git -C /Users/hermanscheele/Desktop/projects/cell_autom log --oneline --all)",
+      "Bash(git -C /Users/hermanscheele/Desktop/projects/cell_autom show 9f2ed57 --stat)",
+      "Bash(g++ -std=c++17 -o main_record main_record.cpp src/utils.cpp -lsfml-graphics -lsfml-window -lsfml-system)",
+      "Bash(g++ -std=c++17 -I include -o main_record main_record.cpp src/utils.cpp -lsfml-graphics -lsfml-window -lsfml-system)",
+      "Bash(g++:*)"
     ]
   }
 }

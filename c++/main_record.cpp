@@ -25,7 +25,7 @@ int main()
     sf::RenderTexture rt;
     rt.resize({wind_size, wind_size});
 
-    int total_frames = 60;
+    int total_frames = 300;
 
     for (int frame = 0; frame < total_frames; frame++)
     {

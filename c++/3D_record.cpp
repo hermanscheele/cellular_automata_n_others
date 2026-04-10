@@ -36,7 +36,7 @@ int main(void)
     SetTargetFPS(60);
 
     int frame        = 0;
-    int total_frames = 60;
+    int total_frames = 300;
 
     while (!WindowShouldClose() && frame < total_frames)
     {
