@@ -10,6 +10,7 @@ WHITE  = (255, 255, 255)
 BLUE  = (0, 0, 255)
 BLACK  = (0, 0, 0)
 
+
 run = True
 while run:
     for event in pg.event.get():
@@ -20,7 +21,14 @@ while run:
 
     screen.fill(BLACK)
 
-    pg.draw.circle(screen, BLUE, (10.0,10.0), 30.0, 3, True, True, True, True)
+    start_cor = (140.0, 50.0)
+    n = 5
+    shift = ()
+    for j in range(n):
+        for i in range(1, n+1):
+            x = (start_cor[0] * j)
+            y = start_cor[1] * i
+            pg.draw.circle(screen, BLUE, (x, y), 10.0, 5 , True, True, True, True)
 
     
 
