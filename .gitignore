@@ -1,1 +1,23 @@
+# Python
 __pycache__/
+*.pyc
+
+# C++ build output
+cpp/build/
+
+# recorded GIF frames (regenerate with record_2d / record_3d)
+frames_2d/
+frames_3d/
+
+# old in-tree binaries
+cpp/main
+cpp/main_record
+cpp/3D
+cpp/3D_record
+cpp/BM_3D
+cpp/3D_normal
+
+# editor / tool settings
+.vscode/
+.claude/
+.DS_Store
